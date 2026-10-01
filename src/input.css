@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+@layer base {
+    h1{
+        @apply text-[70px] font-normal text-black font-roboto leading-[100%]
+    }
+    img {
+        max-width: none;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+@theme {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: rgba(0, 0, 0, 0.5);
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-lg: 48rem;
+  --breakpoint-md: 64rem;
+  --breakpoint-xl: 76rem;
+
+  --font-roboto: "Roboto", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer components {
+    .btn_nav{
+        @apply text-white bg-black p-5 inline-flex gap-3.5 font-inter font-normal border border-black text-[18px] rounded-sm;
+    }
+    .btn_primary{
+        @apply text-white bg-black py-4.5 px-9 inline-flex gap-3.5 font-inter font-normal border border-black text-[18px] rounded-sm;
+    }
+    .btn_secondary{
+        @apply text-black bg-white py-4.5 px-9 inline-flex gap-3.5 font-inter font-normal border border-black text-[18px] rounded-sm;
+    }
+    .paragraph{
+        @apply text-[18px] text-black leading-[135%] font-inter font-light
+    }
+    .feature .item:hover{
+        background-color: #121212 !important;
+    }
+    .feature .item.active{
+        background-color: #121212 !important;
+    }
+}
